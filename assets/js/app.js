@@ -1,3 +1,16 @@
+//       Javascript Calculator - Steve Abrams
+//----------------------------------------------------------
+//this calculator will work using two temp variables to start
+//temp will be the current string of numbers being built by the user
+//temp2 will be the stored string
+//for example:  if the user wants to multiply 122 * 10
+//when the user types 122, that value will be stored in temp
+//when the user clicks the X (times) button, 122 will be set to temp2 and temp will be reset
+//the user will then type in 10, which will be stored in temp
+//when the user clicks the equals button, temp and temp2 will be evaluated according to the multiply function
+//the result will be stored in temp2 and displayed on the screen and temp will be reset
+
+
 var oneButton = document.getElementsByName('one')[0];
 var twoButton = document.getElementsByName('two')[0];
 var threeButton = document.getElementsByName('three')[0];
