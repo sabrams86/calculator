@@ -1,17 +1,17 @@
 var multiply = function(x,y) {
-  return x*y;
+  return Number(x)*Number(y);
 }
 
 var division = function(x,y) {
-  return x/y;
+  return Number(x)/Number(y);
 }
 
 var addition = function(x,y) {
-  return x+y;
+  return Number(x)+Number(y);
 }
 
 var subtraction = function(x,y) {
-  return x-y;
+  return Number(x)-Number(y);
 }
 
 var calculate = function(but1,but2,op) {
