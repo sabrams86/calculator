@@ -19,7 +19,7 @@ var calculate = function(but1,but2,op) {
     case "times":
       return multiply(but1,but2);
       break;
-    case "divide":
+    case "divided_by":
       return division(but1,but2);
       break;
     case "plus":

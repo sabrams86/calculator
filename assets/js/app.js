@@ -21,8 +21,9 @@ var sevenButton = document.getElementsByName('seven')[0];
 var eightButton = document.getElementsByName('eight')[0];
 var nineButton = document.getElementsByName('nine')[0];
 var zeroButton = document.getElementsByName('zero')[0];
+var pointButton = document.getElementsByName('dot')[0];
 //create array of number buttons
-var numButtons = [zeroButton, oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton, eightButton, nineButton];
+var numButtons = [zeroButton, oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton, eightButton, nineButton, pointButton];
 //get all number values
 var one = document.getElementsByName('one')[0].innerText;
 var two = document.getElementsByName('two')[0].innerText;
@@ -34,8 +35,9 @@ var seven = document.getElementsByName('seven')[0].innerText;
 var eight = document.getElementsByName('eight')[0].innerText;
 var nine = document.getElementsByName('nine')[0].innerText;
 var zero = document.getElementsByName('zero')[0].innerText;
+var point = document.getElementsByName('dot')[0].innerText;
 //create array of all number values
-var numbers = [zero, one, two, three, four, five, six, seven, eight, nine];
+var numbers = [zero, one, two, three, four, five, six, seven, eight, nine, point];
 //get all operators
 var plus = document.getElementsByName('plus')[0];
 var minus = document.getElementsByName('minus')[0];
@@ -100,7 +102,7 @@ equals.addEventListener('click', function(){
   console.log(temp);
   console.log(temp2);
   console.log(oper);
-  var answer = calculate(temp, temp2, oper);
+  var answer = calculate(temp2, temp, oper);
   clearScreen();
   display.innerHTML = answer;
   temp = answer;
