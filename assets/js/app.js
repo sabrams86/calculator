@@ -28,60 +28,31 @@ var display = document.getElementsByClassName('display')[0];
 
 var numbers = [zero, one, two, three, four, five, six, seven, eight, nine]
 
+//temp is the current string of numbers being typed into the calculator
 var temp = "";
 
-equals.addEventListener('click', function(){
-  display.innerHTML = "HELLO!!!";
-});
-
+//clear button resets display and clears temp string
 clear.addEventListener('click', function(){
   display.innerHTML = "";
+  temp = "";
 });
 
-//concatenate numbers until operator is hit
-numButtons.addEventListener('click', function(){
-  switch (i) {
-    case numButtons[0]:
-      temp += numbers[0];
-      display.innerHTML = temp;
-      break;
-    case numButtons[0]:
-      temp += numbers[0];
-      display.innerHTML = temp;
-      break;
-    case numButtons[0]:
-      temp += numbers[0];
-      display.innerHTML = temp;
-      break;
-    case numButtons[0]:
-      temp += numbers[0];
-      display.innerHTML = temp;
-      break;
-    case numButtons[0]:
-      temp += numbers[0];
-      display.innerHTML = temp;
-      break;
-    case numButtons[0]:
-      temp += numbers[0];
-      display.innerHTML = temp;
-      break;
-    case numButtons[0]:
-      temp += numbers[0];
-      display.innerHTML = temp;
-      break;
-    case numButtons[0]:
-      temp += numbers[0];
-      display.innerHTML = temp;
-      break;
-    case numButtons[0]:
-      temp += numbers[0];
-      display.innerHTML = temp;
-      break;
-    case numButtons[0]:
-      temp += numbers[0];
-      display.innerHTML = temp;
-      break;
-    default:
-      display.innerHTML = "ERROR";
+//this function returns an anonymous function that will add a number to the temp string
+//and then display the new temp string on the display
+var printNum = function(j) {
+  return function (){
+    temp += numbers[j];
+    display.innerHTML = temp;
   }
+}
+
+//this for loop creates a set of click events for each of the number buttons that
+//uses printNum to simply print that number onto the display
+//it prevents you from having to type ten event listeners
+for (var i=0; i < numButtons.length; i++) {
+  numButtons[i].addEventListener('click', printNum(i));
+}
+
+equals.addEventListener('click', function(){
+  display.innerHTML = "WORKING";
 });
